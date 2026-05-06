@@ -1,4 +1,6 @@
-fn largest<T>(list: &[T]) -> &T {
+use std::cmp::PartialOrd;
+
+fn largest<T: PartialOrd>(list: &[T]) -> &T {
   let mut largest_item = &list[0];
   for i in list {
       if i > largest_item {
@@ -8,7 +10,7 @@ fn largest<T>(list: &[T]) -> &T {
   return largest_item;
 }
 
-fn smallest<T>(list: &[T]) -> &T {
+fn smallest<T: PartialOrd>(list: &[T]) -> &T {
   let mut smallest_item = &list[0];
   for i in list {
       if i < smallest_item {
