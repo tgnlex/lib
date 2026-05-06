@@ -1,4 +1,4 @@
-fn largest(list: &[i32]) -> &i32 {
+fn largest<T>(list: &[T]) -> &T {
   let mut largest_item = &list[0];
   for i in list {
       if i > largest_item {
@@ -8,7 +8,7 @@ fn largest(list: &[i32]) -> &i32 {
   return largest_item;
 }
 
-fn smallest(list: &[i32]) -> &i32 {
+fn smallest<T>(list: &[T]) -> &T {
   let mut smallest_item = &list[0];
   for i in list {
       if i < smallest_item {
