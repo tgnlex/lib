@@ -23,7 +23,7 @@ def readJson(filename):
 def printFile(filename):
     """Read a file and print its content to console"""
     data = readFile(filename)
-    return print(file)
+    return print(data)
 
 
 def writeFile(filename, data):
