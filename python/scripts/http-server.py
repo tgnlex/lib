@@ -24,8 +24,14 @@ def configure():
 
 def start():
     [HOST, PORT] = configure()
-    print('Serving on http://{}:{}'.format(HOST, PORT))
+    logging.info('[HTTP] Serving on http://{}:{}'.format(HOST, PORT))
     server = HTTPServer((HOST, int(PORT)), Handler)
-    server.serve_forever()
+    try: 
+        server.serve_forever()
+    except KeyboardInterrupt:
+        pass 
+    server.server_close()
+    logging.info('[HTTP] Shutting down server...')
+    
 
 start()
