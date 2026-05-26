@@ -7,7 +7,7 @@ interface IConfig {
   plugins: Function[];
   globals: Global[];
 }
-
+ 
 class Bootstrapper {
   server: Express; 
   config: IConfig;

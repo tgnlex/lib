@@ -1,6 +1,9 @@
-import { NL } from '../var/constants.ts';
-
+import { NL } from '../var/constants.ts'
+import { timestamp } from './datetime.ts';
 import fs from 'fs';
+
+
+
 
 function read(file: string) {
   const data = fs.readFileSync(file, 'utf-8');
@@ -14,8 +17,7 @@ function writeText(file: string, content: string) {
 }
 
 function writeLog(file: string, message: string)  {
-  const timestamp = new Date().toISOString();
-  const log = NL + message + " " + timestamp;
+  const log = NL + message + " " + `${timestamp()}`;
   fs.appendFileSync(file, log);
 }
 function writeJson(file: string, data: object) {
