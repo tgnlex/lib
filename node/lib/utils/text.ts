@@ -25,7 +25,7 @@ interface Itext {
   newline: () => string;
 }
 
-const text = {
+const text: Itext = {
   newline: newline
   concat: concat,
   char: char
