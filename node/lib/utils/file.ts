@@ -1,5 +1,5 @@
 import { NL } from '../var/constants.ts'
-import { timestamp } from './datetime.ts';
+import dt from './datetime.ts';
 import fs from 'fs';
 
 
@@ -17,7 +17,7 @@ function writeText(file: string, content: string) {
 }
 
 function writeLog(file: string, message: string)  {
-  const log = NL + message + " " + `${timestamp()}`;
+  const log = NL + message + " " + `${dt.date()}` + " " + `${dt.time()}`;
   fs.appendFileSync(file, log);
 }
 function writeJson(file: string, data: object) {
