@@ -8,3 +8,7 @@ def pass():
 
 def fail():
     return False
+
+def swap(x, y):
+    return y, x
+
