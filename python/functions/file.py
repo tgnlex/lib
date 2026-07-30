@@ -53,7 +53,7 @@ def write_json(filename, data):
         2. data
     """
     with open(filename, "w") as file:
-         file.write(filename, json.dumps(data))
+         file.write(json.dumps(data))
 
 
-print_file('test.txt')
+write_json('test.json', {"hello": "world"})
