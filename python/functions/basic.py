@@ -4,11 +4,11 @@ def noop():
     """ does absolutely nothing """
     pass
 
-def pass():
+def true():
     """ always returns true """
     return True
 
-def fail():
+def false():
     """ always returns false """
     return False
 
