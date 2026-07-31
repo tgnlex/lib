@@ -21,7 +21,7 @@ def read_json(filename):
         takes filename as it's only param. 
     """
 
-    with open(filename, "a") as file:
+    with open(filename, "r") as file:
         return json.dumps(file.read())
 
 
@@ -56,4 +56,13 @@ def write_json(filename, data):
          file.write(json.dumps(data))
 
 
-write_json('test.json', {"hello": "world"})
+def append_file(filename, data):
+     """
+       Append a string to the bottom of a file.
+       takes 2 params:
+         1. filename
+         2. contents
+     """
+     with open(filename, "a") as file:
+         file.write("{}\n".format(data))
+
