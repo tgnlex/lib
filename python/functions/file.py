@@ -33,6 +33,13 @@ def print_file(filename):
     data = read_file(filename)
     return print(data)
 
+def print_json(filename):
+    """
+      Read a json file and print its content to console.
+      takes a filename as it's only parameter.
+    """
+    data = read_json(filename)
+    return print(data)
 
 def write_file(filename, data):
     """ 
@@ -66,3 +73,5 @@ def append_file(filename, data):
      with open(filename, "a") as file:
          file.write("{}\n".format(data))
 
+
+print_json('test.json')

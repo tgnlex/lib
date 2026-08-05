@@ -3,13 +3,15 @@
 def noop():
     """ does absolutely nothing """
     pass
-
-def true():
-    """ always returns true """
+def _null():
+    """ always returns None"""
+    return None
+def _pass():
+    """ always returns True """
     return True
 
-def false():
-    """ always returns false """
+def _fail():
+    """ always returns False """
     return False
 
 def swap(x, y):
