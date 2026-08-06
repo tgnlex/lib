@@ -3,14 +3,14 @@
 def noop():
     """ does absolutely nothing """
     pass
-def _null():
+def null():
     """ always returns None"""
     return None
-def _pass():
+def force():
     """ always returns True """
     return True
 
-def _fail():
+def fail():
     """ always returns False """
     return False
 
@@ -36,5 +36,4 @@ def insert(dictionary, key, value):
 def doc(fn):
     """ gets the docstring of a function """
     print(fn.__doc__)
-
 
